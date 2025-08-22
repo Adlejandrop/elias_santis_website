@@ -1,0 +1,49 @@
+
+body{
+    padding:0px;
+    margin:0px
+}
+
+#images_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+    gap: 16px; /* espacio entre imágenes */
+    padding: 16px;
+    align-items: center; /* centra verticalmente todo el contenido de cada celda */
+
+  }
+  @media (max-width: 768px) {
+    #images_container {
+      grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+  }
+
+#modal{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal_image{
+    position: relative;
+    width: 90%;
+    height:auto;
+    z-index: 1;
+}
+
+.modal_backdrop{
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    opacity: 1;
+}
+
+
+
+.imagen{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
